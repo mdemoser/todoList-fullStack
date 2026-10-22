@@ -25,6 +25,10 @@ async function carregarTarefas() {
         span.className = "titulo";
         span.textContent = tarefa.titulo;
 
+        const spanData = document.createElement("span");
+        spanData.className = 'data';
+        spanData.textContent = tarefa.dataCriacao;
+
         const btn = document.createElement("button");
         btn.className = "btn-deletar";
         btn.textContent = "Deletar";
@@ -32,6 +36,7 @@ async function carregarTarefas() {
 
         li.appendChild(checkbox);
         li.appendChild(span);
+        li.appendChild(spanData);
         li.appendChild(btn);
         lista.appendChild(li);
     });
